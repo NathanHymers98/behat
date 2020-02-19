@@ -1,0 +1,5 @@
+/vendor
+/app/app.db
+/app/cache
+/web/bundles
+

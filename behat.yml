@@ -1,0 +1,19 @@
+default:
+    suites:
+        default:
+            contexts:
+                - FeatureContext
+                - Behat\MinkExtension\Context\MinkContext
+            paths: [ %paths.base%/features/web ]
+        commands:
+            contexts:
+                - CommandLineProcessContext
+            paths: [ %paths.base%/features/commands ]
+
+    extensions:
+        Behat\MinkExtension:
+            base_url: http://localhost:8000
+            goutte: ~
+            selenium2: ~
+            show_cmd: 'open %s'
+        Behat\Symfony2Extension: ~
